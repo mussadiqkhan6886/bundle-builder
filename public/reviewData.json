@@ -1,0 +1,104 @@
+{
+    "cart": [
+       { "cameras": [
+        {
+        "productId": "cam-v4",
+        "variantId": "grey",
+        "name": "Wyze Cam v4",
+        "variantLabel": "Grey",
+        "image": "https://placehold.co/120x120?text=Cam+v4",
+        "category": "cameras",
+        "quantity": 1,
+        "price": 27.98,
+        "compareAtPrice": 35.98,
+        "editable": true,
+        "requiredItem": false
+        },
+        {
+        "productId": "cam-pan-v3",
+        "variantId": "black",
+        "name": "Wyze Cam Pan v3",
+        "variantLabel": "Black",
+        "image": "https://placehold.co/120x120?text=Pan+v3",
+        "category": "cameras",
+        "quantity": 2,
+        "price": 34.98,
+        "compareAtPrice": 39.98,
+        "editable": true,
+        "requiredItem": false
+        }
+    ],
+
+    "plan": [
+        {
+        "productId": "plan-cam-unlimited",
+        "variantId": "default",
+        "name": "Cam Unlimited",
+        "variantLabel": null,
+        "image": "https://placehold.co/120x120?text=Cam+Unlimited",
+        "category": "plan",
+        "quantity": 1,
+        "price": 9.99,
+        "compareAtPrice": 12.99,
+        "editable": true,
+        "requiredItem": false,
+        "isRecurring": true,
+        "billingPeriod": "mo"
+        }
+    ],
+
+    "sensors": [
+        {
+        "productId": "sensor-motion",
+        "variantId": "default",
+        "name": "Wyze Sense Motion Sensor",
+        "variantLabel": null,
+        "image": "https://placehold.co/120x120?text=Motion+Sensor",
+        "category": "sensors",
+        "quantity": 2,
+        "price": 29.99,
+        "compareAtPrice": null,
+        "editable": true,
+        "requiredItem": false
+        },
+        {
+        "productId": "sensor-hub",
+        "variantId": "default",
+        "name": "Wyze Sense Hub (Required)",
+        "variantLabel": null,
+        "image": "https://placehold.co/120x120?text=Sense+Hub",
+        "category": "sensors",
+        "quantity": 1,
+        "price": 0,
+        "compareAtPrice": null,
+        "editable": false,
+        "requiredItem": true
+        }
+    ],
+
+    "protection": [
+        {
+        "productId": "accessory-microsd",
+        "variantId": "default",
+        "name": "Wyze MicroSD Card (256GB)",
+        "variantLabel": null,
+        "image": "https://placehold.co/120x120?text=MicroSD",
+        "category": "accessories",
+        "quantity": 2,
+        "price": 20.98,
+        "compareAtPrice": null,
+        "editable": true,
+        "requiredItem": false
+        }
+    ],
+
+    "totals": {
+        "subtotal": 187.89,
+        "compareAtSubtotal": 238.81,
+        "savings": 50.92,
+        "shipping": 0,
+        "financingPerMonth": 19.79
+    }}
+    ]
+  
+}

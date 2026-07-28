@@ -1,5 +1,7 @@
+import ReviewData from '@/components/ReviewData'
 import Image from 'next/image'
 import React from 'react'
+import { FaTruckFast } from 'react-icons/fa6'
 
 const ReviewPanel = () => {
   return (
@@ -9,13 +11,28 @@ const ReviewPanel = () => {
           REVIEW
         </h3>
       </div>
-      <div className="flex flex-col gap-2.5 px-[20px] pt-[20px] pb-[31px]">
+      <div className="flex flex-col gap-[12px ] px-[20px] pt-[20px] pb-[31px]">
         <div className="">
           <h4 className="font-medium text-[22px]">Your security system</h4>
           <p className="text-black/75 text-[15px] mt-1">Review your personalized protection system designed to keep what matters most safe</p>
         </div>
-        {/* seek data */}
-        <div></div>
+        {/* cart data */}
+        <div>
+          
+          <ReviewData />
+
+          <div className="border-t border-review-border flex flex-row justify-between items-center pt-[15px]">
+            <div className='flex items-center gap-[13px]'>
+              <FaTruckFast size={32} className=" bg-white p-[2px] rounded-[5px] text-green" />
+              <p className="text-sm font-medium">Fast Shipping</p>
+            </div>
+            <div className="flex flex-col">
+              <p className="font-medium text-review-cut-price line-through text-sm text-right">$5.99</p>
+              <p className="text-purple font-bold text-sm">FREE</p>
+            </div>
+          </div>
+
+        </div>
         {/* checkout */}
         <div>
           <div>

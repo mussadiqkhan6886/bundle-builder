@@ -79,3 +79,36 @@ export interface CheckoutState {
   confirmedAt: string | null;
   summarySnapshot: ReviewLineItem[] | null;
 }
+
+
+interface ProductCart {
+  productId: string;
+  variantId: string;
+  name: string;
+  variantLabel: string | null;
+  image: string;
+  category: string;
+  quantity: number;
+  price: number;
+  compareAtPrice: number | null;
+  editable: boolean;
+  requiredItem: boolean;
+  isRecurring?: boolean;
+  billingPeriod?: string;
+}
+
+interface Totals {
+  subtotal: number;
+  compareAtSubtotal: number;
+  savings: number;
+  shipping: number;
+  financingPerMonth: number;
+}
+
+interface CartData {
+  cameras: ProductCart[];
+  plan: ProductCart[];
+  sensors: ProductCart[];
+  protection: ProductCart[];
+  totals: Totals;
+}
