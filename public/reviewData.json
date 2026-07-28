@@ -29,24 +29,6 @@
         }
     ],
 
-    "plan": [
-        {
-        "productId": "plan-cam-unlimited",
-        "variantId": "default",
-        "name": "Cam Unlimited",
-        "variantLabel": null,
-        "image": "https://placehold.co/120x120?text=Cam+Unlimited",
-        "category": "plan",
-        "quantity": 1,
-        "price": 9.99,
-        "compareAtPrice": 12.99,
-        "editable": true,
-        "requiredItem": false,
-        "isRecurring": true,
-        "billingPeriod": "mo"
-        }
-    ],
-
     "sensors": [
         {
         "productId": "sensor-motion",
@@ -70,13 +52,13 @@
         "category": "sensors",
         "quantity": 1,
         "price": 0,
-        "compareAtPrice": null,
+        "compareAtPrice": 29.92,
         "editable": false,
         "requiredItem": true
         }
     ],
 
-    "protection": [
+    "Accessories": [
         {
         "productId": "accessory-microsd",
         "variantId": "default",
@@ -89,6 +71,24 @@
         "compareAtPrice": null,
         "editable": true,
         "requiredItem": false
+        }
+    ],
+
+     "Home monitoring plan": [
+        {
+        "productId": "plan-cam-unlimited",
+        "variantId": "default",
+        "name": "Cam Unlimited",
+        "variantLabel": null,
+        "image": "https://placehold.co/120x120?text=Cam+Unlimited",
+        "category": "plan",
+        "quantity": 1,
+        "price": 9.99,
+        "compareAtPrice": 12.99,
+        "editable": true,
+        "requiredItem": false,
+        "isRecurring": true,
+        "billingPeriod": "mo"
         }
     ],
 
