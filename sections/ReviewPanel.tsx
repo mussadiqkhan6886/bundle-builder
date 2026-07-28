@@ -25,7 +25,7 @@ const ReviewPanel = () => {
                 </div>
                 <div className="flex gap-[8px] flex-col items-end">
                   <p className='bg-purple text-white py-[4px] px-[10px] rounded-[4px] font-medium text-[13px] text-center'>as low as $19.19/mo</p>
-                  <div className="flex gap-[8px] items-center">
+                  <div className="flex gap-[8px] items-end">
                     <span className="line-through text-[22px] font-medium text-review-cut-price">$238.81</span>
                     <p className="font-bold text-3xl text-purple">$187.89</p>
                   </div>
