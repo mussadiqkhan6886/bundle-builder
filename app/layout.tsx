@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { poppins } from "@/lib/font";
+import { gilory } from "@/lib/font";
 
 export const metadata: Metadata = {
   title: "Take Home Bundle Builder",
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full ${poppins.className} antialiased`}
+      className={`h-full ${gilory.className} antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

@@ -1,7 +1,23 @@
-import {Poppins} from "next/font/google"
+import localFont from "next/font/local";
 
-export const poppins = Poppins({
-    weight: ["400", "500", "600", "700", '800'],
-    subsets: ["latin"],
-    style: ["italic", "normal"]
-})
+export const gilory = localFont({
+  src: [
+    {
+      path: "../app/fonts/Gilroy-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../app/fonts/Gilroy-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../app/fonts/Gilroy-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-gilory",
+  display: "swap",
+});
