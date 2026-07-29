@@ -30,7 +30,7 @@ const ReviewItem = ({image, name, productName, billingPeriod, requiredItem, edit
                 <button className={`${requiredItem && !editable ? "bg-[#F1F1F2] border border-[#CED6DE]" : "bg-white "} flex items-center justify-center w-[22px] h-[22px] rounded-[4px] font-medium`}>+</button>
             </div>}
         </div>
-        <div>
+        <div className='flex flex-col md:flex-row md:gap-[10px] 2xl:flex-col 2xl:gap-0'>
             {compareAtPrice && <p className="font-medium text-sm text-review-cut-price line-through text-right">${compareAtPrice}{billingPeriod && <span>/{billingPeriod}</span>}</p>}
             {price === 0 ? <p className="font-semibold text-sm text-purple text-right">FREE</p> : <p className="font-semibold text-right text-sm text-purple">${price}{billingPeriod && <span>/{billingPeriod}</span>}</p>}
         </div>

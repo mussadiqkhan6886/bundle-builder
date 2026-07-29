@@ -3,7 +3,8 @@ import { IconType } from "react-icons";
 export interface Variant {
   variantId: string;  
   label: string;        
-  swatch?: string;      
+  variantImage: string;    
+  // next: string | null  
 }
 
 export type ProductCategory = "cameras" | "sensors" | "accessories" | "plan";
@@ -29,6 +30,7 @@ export interface Step {
   id: string;              
   stepNumber: number;      
   title: string;           
+  next: string | null
   icon: "BiCameraHome" | "FiShield" | "FaWifi" | "FaTableCells";            
   products: Product[];
 }

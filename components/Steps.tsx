@@ -11,7 +11,7 @@ const fetchSteps = async () => {
 const Steps = async () => {
     const data = await fetchSteps()
   return (
-    <div className="flex flex-col w-full gap-[3px]">
+    <div className="flex flex-col bg-bg-light-blue w-full gap-[3px]">
         {data.map((s: Step) => (
             <Accordion key={s.id} {...s} />
         ))}
