@@ -13,6 +13,11 @@ export const gilory = localFont({
       style: "normal",
     },
     {
+      path: "../app/fonts/Gilroy-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
       path: "../app/fonts/Gilroy-Bold.ttf",
       weight: "700",
       style: "normal",

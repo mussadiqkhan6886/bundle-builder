@@ -4,7 +4,7 @@
       "id": "cameras",
       "stepNumber": 1,
       "title": "Choose your cameras",
-      "icon": "camera",
+      "icon": "BiCameraHome",
       "products": [
         {
           "id": "cam-v4",
@@ -95,7 +95,7 @@
       "id": "plan",
       "stepNumber": 2,
       "title": "Choose your plan",
-      "icon": "shield-check",
+      "icon": "FiShield",
       "products": [
         {
           "id": "plan-cam-unlimited",
@@ -135,7 +135,7 @@
       "id": "sensors",
       "stepNumber": 3,
       "title": "Choose your sensors",
-      "icon": "sensor",
+      "icon": "FaWifi",
       "products": [
         {
           "id": "sensor-motion",
@@ -185,7 +185,7 @@
       "id": "protection",
       "stepNumber": 4,
       "title": "Add extra protection",
-      "icon": "shield-plus",
+      "icon": "FaTableCells",
       "products": [
         {
           "id": "accessory-microsd",

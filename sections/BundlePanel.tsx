@@ -1,12 +1,11 @@
+import Steps from '@/components/Steps'
 import React from 'react'
 
 const BundlePanel = () => {
   return (
-    <section>
-      <h1>Let&apos; get started!</h1>
-      <div className="flex flex-col">
-
-      </div>
+    <section className="flex flex-col items-center w-full gap-[20px]">
+      <h1 className="font-bold text-[32px] items-center ">Let&apos;s get started!</h1>
+      <Steps />
     </section>
   )
 }

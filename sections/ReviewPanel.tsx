@@ -32,7 +32,7 @@ const ReviewPanel = () => {
             </div>
             <div className="flex flex-col">
               <p className="font-medium text-review-cut-price line-through text-sm text-right">$5.99</p>
-              <p className="text-purple text-right font-bold text-sm">FREE</p>
+              <p className="text-purple text-right font-semibold text-sm">FREE</p>
             </div>
           </div>
 

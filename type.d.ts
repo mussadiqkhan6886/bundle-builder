@@ -1,3 +1,5 @@
+import { IconType } from "react-icons";
+
 export interface Variant {
   variantId: string;  
   label: string;        
@@ -27,7 +29,7 @@ export interface Step {
   id: string;              
   stepNumber: number;      
   title: string;           
-  icon: string;            
+  icon: "BiCameraHome" | "FiShield" | "FaWifi" | "FaTableCells";            
   products: Product[];
 }
 
