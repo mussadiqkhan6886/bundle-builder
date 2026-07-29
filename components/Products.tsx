@@ -34,7 +34,7 @@ const Products = ({product}: {product: Product}) => {
             </div>
             <div className="flex items-center xl:flex-col gap-[3px] xl:gap-[1px]">
                 {product.compareAtPrice && <span className="text-red tracking-[0.6px] line-through text-[16px] text-right">${product.compareAtPrice}</span>}
-                <span className="text-lg text-price-product tracking-[0.6px]">${product.price}</span>
+                <span className="text-lg text-price-product tracking-[0.6px]">{product.price === 0  ? "FREE" : `$${product.price}`}</span>
             </div>
         </div>
       </div>

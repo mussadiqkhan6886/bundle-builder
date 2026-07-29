@@ -1,6 +1,4 @@
-import React from 'react'
-import Accordion from './Accordion'
-import { Step } from '@/type'
+import AccordionList from './AccordionList'
 
 const fetchSteps = async () => {
     const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data.json`)
@@ -11,11 +9,7 @@ const fetchSteps = async () => {
 const Steps = async () => {
     const data = await fetchSteps()
   return (
-    <div className="flex flex-col bg-bg-light-blue w-full gap-[3px]">
-        {data.map((s: Step) => (
-            <Accordion key={s.id} {...s} />
-        ))}
-    </div>
+        <AccordionList steps={data} />
   )
 }
 
