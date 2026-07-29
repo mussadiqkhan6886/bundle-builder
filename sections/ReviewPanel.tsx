@@ -27,7 +27,7 @@ const ReviewPanel = () => {
           {/* free shipping step */}
           <div className="border-t mt-4 border-review-border flex flex-row justify-between items-center pt-[14px]">
             <div className='flex items-center gap-[13px]'>
-              <FaTruckFast size={32} className="w-[41px] h-[41px] bg-white p-[2px] rounded-[5px] text-green" />
+              <FaTruckFast className="w-[38px] h-[38px] bg-white p-[2px] rounded-[5px] text-green" />
               <p className="text-sm font-medium">Fast Shipping</p>
             </div>
             <div className="flex flex-col">

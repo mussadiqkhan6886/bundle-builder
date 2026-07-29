@@ -1,15 +1,16 @@
 import { ProductCart } from '@/type'
 import Image from 'next/image'
 import React from 'react'
+import { FiShield } from 'react-icons/fi'
 
-type Props = Omit<ProductCart, "productId" | "variantId" | "category" | "isRecurring"> & { productName: string[] | string}
+type Props = Omit<ProductCart, "productId" | "variantId" | "category" | "isRecurring" | "variantLabel"> & { productName: string[] | string}
 
-const ReviewItem = ({image, name, productName, variantLabel, billingPeriod, requiredItem, editable, compareAtPrice, price, quantity}: Props) => {
+const ReviewItem = ({image, name, productName, billingPeriod, requiredItem, editable, compareAtPrice, price, quantity}: Props) => {
   return (
     <div className="flex gap-[16px] items-center">
         <div className="flex flex-2 justify-between items-center">
             <div className="flex flex-row items-center gap-[12px]">
-            <Image className="w-[41px] h-[41px] rounded-[5px]" src={image} alt={name} width={50} height={50} />
+            {image === null ? <FiShield className="text-purple" size={22} /> : <Image className="w-[41px] h-[41px] bg-white rounded-[5px]" src={image} alt={name} width={50} height={50} />}
             <h3 className={`${name === "Cam Unlimited" ? "font-semibold text-[16px]" : "font-medium text-sm"}`}>
                 {name === "Cam Unlimited" ? (
                 <>
@@ -19,7 +20,7 @@ const ReviewItem = ({image, name, productName, variantLabel, billingPeriod, requ
                 ) : (
                 name
                 )}
-                {variantLabel && ` - ${variantLabel}`}
+                {/* {variantLabel && ` - ${variantLabel}`} */}
             </h3>
             </div>
             {/* quantity */}

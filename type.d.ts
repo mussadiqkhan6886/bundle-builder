@@ -86,7 +86,7 @@ interface ProductCart {
   variantId: string;
   name: string;
   variantLabel: string | null;
-  image: string;
+  image: string | null;
   category: string;
   quantity: number;
   price: number;
