@@ -43,11 +43,11 @@ const ReviewPanel = () => {
         <div>
           <div>
               <div className="flex flex-row md:flex-col 2xl:flex-row justify-between items-center">
-                <div className="flex gap-[25px] items-center">
+                <div className="flex md:gap-[15px] lg:gap-[25px] items-center">
                   <Image src="/images/satisfactionBadge.png" alt="satisfaction Badge image in checkout" width={200} height={200} className="w-[80px] h-[80px] md:w-[131px] md:h-[131px] object-contain" />
                   <div className="hidden md:flex md:flex-col md:gap-[10px] 2xl:hidden">
-                    <h5 className="font-semibold text-lg">30-day hassle-free returns</h5>
-                    <p className="text-lg">if you&apos;re not totally in love with the product, we will refund you 100%.</p>
+                    <h5 className="font-semibold text-md lg:text-lg">30-day hassle-free returns</h5>
+                    <p className="text-md lg:text-lg">if you&apos;re not totally in love with the product, we will refund you 100%.</p>
                   </div>
                 </div>
                 <div className="flex gap-[8px] flex-col md:flex-row 2xl:flex-col justify-between w-full items-end">
