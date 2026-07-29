@@ -4,6 +4,7 @@ import { Step } from '@/type'
 import { FaCaretDown, FaTableCells, FaWifi } from 'react-icons/fa6'
 import { BiCameraHome } from 'react-icons/bi';
 import { FiShield } from 'react-icons/fi';
+import Products from './Products';
 
 const icons = {
   BiCameraHome,
@@ -32,6 +33,11 @@ const Accordion = ({stepNumber, title, icon, products}: Props) => {
             <FaCaretDown />
           </div>
         </div>
+      </div>
+      <div className="grid grid-cols-1 place-items-center">
+        {products.map(p => (
+          <Products key={p.id} product={p} />
+        ))}
       </div>
     </div>
   )

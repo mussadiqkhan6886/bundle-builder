@@ -19,9 +19,9 @@
           "editable": true,
           "requiredItem": false,
           "variants": [
-            { "variantId": "white", "label": "White", "swatch": "https://placehold.co/24x24/ffffff/000000?text=W" },
-            { "variantId": "grey",  "label": "Grey",  "swatch": "https://placehold.co/24x24/808080/ffffff?text=G" },
-            { "variantId": "black", "label": "Black", "swatch": "https://placehold.co/24x24/000000/ffffff?text=B" }
+            { "variantId": "white", "label": "White", "variantImage": "https://placehold.co/24x24/ffffff/000000?text=W" },
+            { "variantId": "grey",  "label": "Grey",  "variantImage": "https://placehold.co/24x24/808080/ffffff?text=G" },
+            { "variantId": "black", "label": "Black", "variantImage": "https://placehold.co/24x24/000000/ffffff?text=B" }
           ]
         },
         {
@@ -37,8 +37,8 @@
           "editable": true,
           "requiredItem": false,
           "variants": [
-            { "variantId": "white", "label": "White", "swatch": "https://placehold.co/24x24/ffffff/000000?text=W" },
-            { "variantId": "black", "label": "Black", "swatch": "https://placehold.co/24x24/000000/ffffff?text=B" }
+            { "variantId": "white", "label": "White", "variantImage": "https://placehold.co/24x24/ffffff/000000?text=W" },
+            { "variantId": "black", "label": "Black", "variantImage": "https://placehold.co/24x24/000000/ffffff?text=B" }
           ]
         },
         {
@@ -54,8 +54,8 @@
           "editable": true,
           "requiredItem": false,
           "variants": [
-            { "variantId": "white", "label": "White", "swatch": "https://placehold.co/24x24/ffffff/000000?text=W" },
-            { "variantId": "black", "label": "Black", "swatch": "https://placehold.co/24x24/000000/ffffff?text=B" }
+            { "variantId": "white", "label": "White", "variantImage": "https://placehold.co/24x24/ffffff/000000?text=W" },
+            { "variantId": "black", "label": "Black", "variantImage": "https://placehold.co/24x24/000000/ffffff?text=B" }
           ]
         },
         {
@@ -85,8 +85,8 @@
           "editable": true,
           "requiredItem": false,
           "variants": [
-            { "variantId": "white", "label": "White", "swatch": "https://placehold.co/24x24/ffffff/000000?text=W" },
-            { "variantId": "black", "label": "Black", "swatch": "https://placehold.co/24x24/000000/ffffff?text=B" }
+            { "variantId": "white", "label": "White", "variantImage": "https://placehold.co/24x24/ffffff/000000?text=W" },
+            { "variantId": "black", "label": "Black", "variantImage": "https://placehold.co/24x24/000000/ffffff?text=B" }
           ]
         }
       ]
