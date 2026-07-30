@@ -3,9 +3,20 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
-const Products = ({product}: {product: Product}) => {
+type Props = {
+  product: Product
+  length: number
+  index: number
+}
+
+const Products = ({product, length, index}: Props) => {
+
+  {/* center last div only if its single or alone */}
+  const isLast = index === length - 1
+  const isOdd = length % 2 === 1
+
   return (
-    <div className="p-[11px] bg-white w-full items-center h-full flex flex-col 2xl:flex-row gap-[13px] rounded-[10px]">
+    <div className={`p-[11px] bg-white w-full 2xl:w-[381px] items-center h-full flex flex-col 2xl:flex-row gap-[13px] rounded-[10px] ${isLast && isOdd ? "2xl:col-span-2 2xl:flex 2xl:justify-center" : ""}`}>
       <div className="relative w-full 2xl:w-[160px] h-[180px] ">
         {/* badge */}
         {product.badge && <span className="absolute top-2 left-2 bg-purple text-white py-[2px] px-[6px] rounded-[10px] font-semibold text-sm xl:text-xs z-20 ">{product.badge}</span>}
@@ -26,7 +37,7 @@ const Products = ({product}: {product: Product}) => {
         </div>
         <div className="flex justify-between items-center">
             <div>
-                {!product.billingPeriod && <div className="flex justify-between py-[4px] w-[77px]">
+                {<div className="flex justify-between py-[4px] w-[77px]">
                 <button className={`${product.requiredItem && !product.editable ? "bg-[#F1F1F2] border border-[#CED6DE]" : "bg-very-light-borders "} flex items-center justify-center w-[22px] h-[22px] rounded-[4px] font-semibold`}>-</button>
                 <p className="font-semibold text-sm">0</p>
                 <button className={`${product.requiredItem && !product.editable ? "bg-[#F1F1F2] border border-[#CED6DE]" : "bg-very-light-borders "} flex items-center justify-center w-[22px] h-[22px] rounded-[4px] font-semibold`}>+</button>
