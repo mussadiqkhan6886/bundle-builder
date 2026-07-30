@@ -5,7 +5,7 @@ import { FaTruckFast } from 'react-icons/fa6'
 
 const ReviewPanel = () => {
   return (
-    <section className="bg-bg-light-blue h-full pt-[15px] pb-4">
+    <section className="bg-bg-light-blue h-full pt-[15px] pb-4 lg:px-8 2xl:px-0">
       {/* review header */}
       <div className="block md:hidden 2xl:block px-[15px]">
         <h3 className="text-section-heading text-xs tracking-wider font-medium">
@@ -13,10 +13,10 @@ const ReviewPanel = () => {
         </h3>
       </div>
       {/* review details */}
-      <div className="flex flex-col md:flex-row 2xl:flex-col px-[20px] pt-[18px] gap-0 md:gap-[52px] 2xl:gap-0">
+      <div className="flex flex-col md:flex-row 2xl:flex-col px-[20px] pt-[18px] pb-[31px] gap-0 md:gap-[52px] 2xl:gap-0">
         <div className="flex flex-col">
           <div>
-            <h4 className="font-medium text-[23px]">Your security system</h4>
+            <h4 className="font-semibold text-[23px]">Your security system</h4>
             <p className="text-black/75 text-[15px]">Review your personalized protection system designed to keep what matters most safe</p>
           </div>
           {/* cart data */}
@@ -44,7 +44,7 @@ const ReviewPanel = () => {
           <div>
               <div className="flex flex-row md:flex-col 2xl:flex-row justify-between items-center">
                 <div className="flex md:gap-[15px] lg:gap-[25px] items-center">
-                  <Image src="/images/satisfactionBadge.png" alt="satisfaction Badge image in checkout" width={200} height={200} className="w-[80px] h-[80px] md:w-[131px] md:h-[131px] object-contain" />
+                  <Image src="/images/satisfactionBadge.png" alt="satisfaction Badge image in checkout" width={200} height={200} className="w-[100px] h-[100px] md:w-[131px] md:h-[131px] object-contain" />
                   <div className="hidden md:flex md:flex-col md:gap-[10px] 2xl:hidden">
                     <h5 className="font-semibold text-md lg:text-lg">30-day hassle-free returns</h5>
                     <p className="text-md lg:text-lg">if you&apos;re not totally in love with the product, we will refund you 100%.</p>
