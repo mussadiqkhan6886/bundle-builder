@@ -34,7 +34,7 @@ const Accordion = ({ stepNumber, title, icon, next, products, isOpen, onToggle, 
         <div className="flex justify-between items-center">
           <div className="flex items-center gap-[10px]">
             <Icon className="w-[22px] text-review-cut-price h-[22px]" />
-            <h3 className="font-semibold text-[19px]">{title}</h3>
+            <h3 className="font-semibold text-[19px] md:text-[27px] xl:text-[22px]">{title}</h3>
           </div>
           <div className="flex text-purple items-center gap-[4px]">
             <p className="font-medium select-none">2 selected</p>

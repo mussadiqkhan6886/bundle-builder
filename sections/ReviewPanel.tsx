@@ -5,7 +5,7 @@ import { FaTruckFast } from 'react-icons/fa6'
 
 const ReviewPanel = () => {
   return (
-    <section className="bg-bg-light-blue h-full pt-[15px] pb-4 lg:px-8 xl:px-0 xl:w-[55%] xl:min-w-[400px]">
+    <section className="bg-bg-light-blue h-full pt-[15px] pb-4 lg:px-9 xl:px-0 xl:w-[55%] xl:min-w-[400px]">
       {/* review header */}
       <div className="block md:hidden xl:block px-[15px]">
         <h3 className="text-section-heading text-xs tracking-wider font-medium">
@@ -40,14 +40,14 @@ const ReviewPanel = () => {
           </div>
         </div>
         {/* checkout */}
-        <div>
+        <div className="lg:w-[50%] xl:w-full">
           <div>
               <div className="flex flex-row md:flex-col xl:flex-row justify-between items-center">
                 <div className="flex md:gap-[15px] lg:gap-[25px] items-center">
                   <Image src="/images/satisfactionBadge.png" alt="satisfaction Badge image in checkout" width={200} height={200} className="w-[100px] h-[100px] md:w-[131px] md:h-[131px] object-contain" />
                   <div className="hidden md:flex md:flex-col md:gap-[10px] xl:hidden">
-                    <h5 className="font-semibold text-md lg:text-lg">30-day hassle-free returns</h5>
-                    <p className="text-md lg:text-lg">if you&apos;re not totally in love with the product, we will refund you 100%.</p>
+                    <h5 className="font-semibold text-md lg:text-lg leading-tight">30-day hassle-free returns</h5>
+                    <p className="text-md lg:text-lg leading-tight">if you&apos;re not totally in love with the product, we will refund you 100%.</p>
                   </div>
                 </div>
                 <div className="flex gap-[8px] flex-col md:flex-row xl:flex-col justify-between w-full items-end">

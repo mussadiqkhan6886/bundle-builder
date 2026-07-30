@@ -36,7 +36,7 @@ const ReviewData = () => {
           if (category === "totals") return null;
 
           return (
-            <div className="border-t mt-4 border-review-border pt-[14px] flex flex-col gap-[12px]" key={category}>
+            <div className="border-t mt-4 border-review-border pt-[14px] flex flex-col gap-[8px] md:gap-[10px]" key={category}>
               <h3 className="text-sm text-review-heading uppercase tracking-wider">
                 {category}
               </h3>
