@@ -130,6 +130,7 @@ interface LineItem {
   compareAtPrice: number | null
   editable: boolean
   requiredItem: boolean
+  billingPeriod?: string
 }
 
 interface Totals {

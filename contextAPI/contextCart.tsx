@@ -28,7 +28,7 @@ export function CartProvider({
   const [selections, setSelections] = useState<Selections>(seedSelections)
   const [activeVariants, setActiveVariants] = useState<ActiveVariants>(seedActiveVariants)
 
-   useEffect(() => {
+  useEffect(() => {
     const saved = localStorage.getItem(STORAGE_KEY)
     if (saved) {
       const parsed = JSON.parse(saved)
@@ -143,6 +143,7 @@ export function CartProvider({
             compareAtPrice: product.compareAtPrice ?? null,
             editable: product.editable,
             requiredItem: product.requiredItem,
+            billingPeriod: product.billingPeriod
           })
         }
       })

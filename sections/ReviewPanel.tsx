@@ -1,7 +1,6 @@
 import Checkout from '@/components/Checkout'
 import ReviewData from '@/components/ReviewData'
 import SaveSystemButton from '@/components/SaveSystemButton'
-import Image from 'next/image'
 import { FaTruckFast } from 'react-icons/fa6'
 
 const ReviewPanel = () => {
@@ -42,29 +41,8 @@ const ReviewPanel = () => {
         </div>
         {/* checkout */}
         <div className="lg:w-[50%] xl:w-full">
-          <div>
-              <div className="flex flex-row md:flex-col xl:flex-row justify-between items-center">
-                <div className="flex md:gap-[15px] lg:gap-[25px] items-center">
-                  <Image src="/images/satisfactionBadge.png" alt="satisfaction Badge image in checkout" width={200} height={200} className="w-[100px] h-[100px] md:w-[131px] md:h-[131px] object-contain" />
-                  <div className="hidden md:flex md:flex-col md:gap-[10px] xl:hidden">
-                    <h5 className="font-semibold text-md lg:text-lg leading-tight">30-day hassle-free returns</h5>
-                    <p className="text-md lg:text-lg leading-tight">if you&apos;re not totally in love with the product, we will refund you 100%.</p>
-                  </div>
-                </div>
-                <div className="flex gap-[8px] flex-col md:flex-row xl:flex-col justify-between w-full items-end">
-                  <p className='bg-purple text-white py-[4px] px-[10px] rounded-[4px] font-medium text-[13px] text-center'>as low as $19.19/mo</p>
-                  <div className="flex gap-[8px] items-end">
-                    <span className="line-through text-[22px] font-medium text-review-cut-price">$238.81</span>
-                    <p className="font-bold text-3xl text-purple">$187.89</p>
-                  </div>
-                </div>
-              </div>
-
-              <Checkout />
-
-          </div>
-
-         <SaveSystemButton />
+          <Checkout />
+          <SaveSystemButton />
         </div>
       </div>      
     </section>

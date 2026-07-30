@@ -1,41 +1,17 @@
 'use client';
 
-import { CartData, ProductCart } from '@/type';
-import React, { useEffect, useState } from 'react'
+import {  ProductCart } from '@/type';
 import ReviewItem from './ReviewItem';
+import { useCart } from '@/contextAPI/contextCart';
 
 const ReviewData = () => {
-  const [data, setData] = useState<CartData[] | null>(null)
-
-  useEffect(() => {
-    const fetchData = async () => {
-     try{
-        const res = await fetch("/reviewData.json")
-        const cartData = await res.json()
-
-        setData(cartData.cart)
-     }catch(err){
-      if(err instanceof Error) console.log(err.message)
-     }
-    }
-    const savedSys = localStorage.getItem("savedSys")
-    if(savedSys){
-      setData(JSON.parse(savedSys))
-    }else{
-      fetchData()
-    }
-    
-  }, [])
+  const {getGroupedLineItems} = useCart()
+  const data = getGroupedLineItems()
   return (
     <div>
-      {data?.map((cart, index) => (
-      <div key={index}>
-
-        {Object.entries(cart).map(([category, items]) => {
-
-          if (category === "totals") return null;
-
-          return (
+      <div>
+        {Object.entries(data).map(([category, items]) => {
+          return items.length > 0 &&  (
             <div className="border-t mt-4 border-review-border pt-[14px] flex flex-col gap-[8px] md:gap-[10px]" key={category}>
               <h3 className="text-sm text-review-heading uppercase tracking-wider">
                 {category}
@@ -53,9 +29,7 @@ const ReviewData = () => {
             </div>
           );
         })}
-
       </div>
-    ))}
     </div>
   )
 }
