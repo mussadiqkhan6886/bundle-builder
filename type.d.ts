@@ -105,8 +105,6 @@ interface Totals {
   subtotal: number;
   compareAtSubtotal: number;
   savings: number;
-  shipping: number;
-  financingPerMonth: number;
 }
 
 interface CartData {
@@ -115,4 +113,54 @@ interface CartData {
   sensors: ProductCart[];
   protection: ProductCart[];
   totals: Totals;
+}
+
+type Selections = Record<string, Record<string, number>> // productId -> variantId -> qty
+type ActiveVariants = Record<string, string>              // productId -> currently active variantId
+
+interface LineItem {
+  productId: string
+  variantId: string
+  name: string
+  variantLabel: string | null
+  image: string
+  category: string
+  quantity: number
+  price: number
+  compareAtPrice: number | null
+  editable: boolean
+  requiredItem: boolean
+}
+
+interface Totals {
+  subtotal: number
+  compareAtSubtotal: number
+  savings: number
+}
+
+interface CartContextValue {
+  steps: Step[]
+
+  // core quantity actions
+  increment: (productId: string, variantId: string) => void
+  decrement: (productId: string, variantId: string) => void
+  setQuantity: (productId: string, variantId: string, newQty: number) => void
+
+  // active variant (which chip is highlighted per product)
+  activeVariants: ActiveVariants
+  setActiveVariant: (productId: string, variantId: string) => void
+
+  // reads
+  getQuantity: (productId: string, variantId: string) => number
+  getActiveVariantId: (productId: string) => string
+  getSelectedCount: (stepId: string) => number
+
+  // review panel
+  getLineItems: () => LineItem[]
+  getGroupedLineItems: () => Record<string, LineItem[]>
+  getTotals: () => Totals
+
+  // persistence
+  saveSystem: () => void
+
 }

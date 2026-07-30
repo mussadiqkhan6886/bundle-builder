@@ -2,11 +2,11 @@
 
 import React, { useState } from 'react'
 import Accordion from './Accordion'
-import { Step } from '@/type'
+import { useCart } from '@/contextAPI/contextCart'
 
-const AccordionList = ({ steps }: { steps: Step[] }) => {
+const AccordionList = () => {
+  const {steps} = useCart()
   const [openStepId, setOpenStepId] = useState<string>(steps[0]?.id)
-
   function toggleStep(stepId: string) {
     setOpenStepId(prev => (prev === stepId ? '' : stepId));
   }

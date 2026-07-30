@@ -1,3 +1,4 @@
+import Checkout from '@/components/Checkout'
 import ReviewData from '@/components/ReviewData'
 import SaveSystemButton from '@/components/SaveSystemButton'
 import Image from 'next/image'
@@ -59,10 +60,7 @@ const ReviewPanel = () => {
                 </div>
               </div>
 
-              <div className="pt-3">
-                <p className="text-green mb-1 text-center text-sm font-medium">Congrats! You&apos;re saving $50.92 on your security bundle!</p>
-                <button className="bg-purple text-white text-[19px] font-bold tracking-wide text-center rounded-[5px] w-full py-3.25 px-4">Checkout</button>
-              </div>
+              <Checkout />
 
           </div>
 
