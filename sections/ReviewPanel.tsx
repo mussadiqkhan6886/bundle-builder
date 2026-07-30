@@ -5,15 +5,15 @@ import { FaTruckFast } from 'react-icons/fa6'
 
 const ReviewPanel = () => {
   return (
-    <section className="bg-bg-light-blue h-full pt-[15px] pb-4 lg:px-8 2xl:px-0">
+    <section className="bg-bg-light-blue h-full pt-[15px] pb-4 lg:px-8 xl:px-0 xl:w-[55%] xl:min-w-[400px]">
       {/* review header */}
-      <div className="block md:hidden 2xl:block px-[15px]">
+      <div className="block md:hidden xl:block px-[15px]">
         <h3 className="text-section-heading text-xs tracking-wider font-medium">
           REVIEW
         </h3>
       </div>
       {/* review details */}
-      <div className="flex flex-col md:flex-row 2xl:flex-col px-[20px] pt-[18px] pb-[31px] gap-0 md:gap-[52px] 2xl:gap-0">
+      <div className="flex flex-col md:flex-row xl:flex-col px-[20px] pt-[18px] pb-[31px] gap-0 md:gap-[52px] xl:gap-0">
         <div className="flex flex-col">
           <div>
             <h4 className="font-semibold text-[23px]">Your security system</h4>
@@ -31,7 +31,7 @@ const ReviewPanel = () => {
                 <FaTruckFast className="w-[38px] h-[38px] bg-white p-[2px] rounded-[5px] text-green" />
                 <p className="text-sm font-medium">Fast Shipping</p>
               </div>
-              <div className="flex flex-col md:flex-row md:gap-[10px] 2xl:flex-col 2xl:gap-0">
+              <div className="flex flex-col md:flex-row md:gap-[10px] xl:flex-col xl:gap-0">
                 <p className="font-medium text-review-cut-price line-through text-sm text-right">$5.99</p>
                 <p className="text-purple text-right font-semibold text-sm">FREE</p>
               </div>
@@ -42,15 +42,15 @@ const ReviewPanel = () => {
         {/* checkout */}
         <div>
           <div>
-              <div className="flex flex-row md:flex-col 2xl:flex-row justify-between items-center">
+              <div className="flex flex-row md:flex-col xl:flex-row justify-between items-center">
                 <div className="flex md:gap-[15px] lg:gap-[25px] items-center">
                   <Image src="/images/satisfactionBadge.png" alt="satisfaction Badge image in checkout" width={200} height={200} className="w-[100px] h-[100px] md:w-[131px] md:h-[131px] object-contain" />
-                  <div className="hidden md:flex md:flex-col md:gap-[10px] 2xl:hidden">
+                  <div className="hidden md:flex md:flex-col md:gap-[10px] xl:hidden">
                     <h5 className="font-semibold text-md lg:text-lg">30-day hassle-free returns</h5>
                     <p className="text-md lg:text-lg">if you&apos;re not totally in love with the product, we will refund you 100%.</p>
                   </div>
                 </div>
-                <div className="flex gap-[8px] flex-col md:flex-row 2xl:flex-col justify-between w-full items-end">
+                <div className="flex gap-[8px] flex-col md:flex-row xl:flex-col justify-between w-full items-end">
                   <p className='bg-purple text-white py-[4px] px-[10px] rounded-[4px] font-medium text-[13px] text-center'>as low as $19.19/mo</p>
                   <div className="flex gap-[8px] items-end">
                     <span className="line-through text-[22px] font-medium text-review-cut-price">$238.81</span>

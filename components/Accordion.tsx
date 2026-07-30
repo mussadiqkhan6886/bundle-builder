@@ -45,7 +45,7 @@ const Accordion = ({ stepNumber, title, icon, next, products, isOpen, onToggle, 
 
       {isOpen && (
         <>
-          <div className={`grid grid-cols-1 px-[15px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-2 place-items-center gap-[15px] md:gap-[10px] lg:gap-[15px]`}>
+          <div className={`grid grid-cols-1 px-[15px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-2  place-items-center gap-[15px] md:gap-[15px] lg:gap-[12px] xl:gap-[15px]`}>
             {products.map((p, i) => (
               <Products key={p.id} index={i} length={products.length} product={p} />
             ))}
