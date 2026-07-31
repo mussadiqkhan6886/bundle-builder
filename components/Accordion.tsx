@@ -5,6 +5,7 @@ import { FaCaretDown, FaCaretUp, FaTableCells, FaWifi } from 'react-icons/fa6'
 import { BiCameraHome } from 'react-icons/bi';
 import { FiShield } from 'react-icons/fi';
 import Products from './Products';
+import { useCart } from '@/contextAPI/contextCart';
 
 const icons = {
   BiCameraHome,
@@ -21,7 +22,11 @@ type Props = Step & {
 }
 
 const Accordion = ({ stepNumber, title, icon, next, products, isOpen, onToggle, onNext, openStepId, id }: Props) => {
+
   const Icon = icons[icon as keyof typeof icons]
+  const {getSelectedCount} = useCart()
+
+  const selectedCount = getSelectedCount(id)
 
   return (
     <div className={`${openStepId === id ? "bg-bg-light-blue pb-3" : ""} pt-[10px] rounded-[10px]`}>
@@ -37,7 +42,7 @@ const Accordion = ({ stepNumber, title, icon, next, products, isOpen, onToggle, 
             <h3 className="font-semibold text-[19px] md:text-[27px] xl:text-[22px]">{title}</h3>
           </div>
           <div className="flex text-purple items-center gap-[4px]">
-            <p className="font-medium select-none">2 selected</p>
+            <p className="font-medium select-none">{selectedCount > 0 && `${selectedCount} selected`}</p>
             {isOpen ? <FaCaretUp /> : <FaCaretDown />}
           </div>
         </div>

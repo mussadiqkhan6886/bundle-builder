@@ -1,6 +1,4 @@
 import Steps from '@/components/Steps'
-import { Step } from '@/type'
-import React from 'react'
 
 const BundlePanel = () => {
   return (

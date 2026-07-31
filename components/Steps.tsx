@@ -1,9 +1,8 @@
-import { Step } from '@/type'
 import AccordionList from './AccordionList'
 
 const Steps = () => {
   return (
-        <AccordionList />
+      <AccordionList />
   )
 }
 

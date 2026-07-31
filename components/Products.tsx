@@ -15,6 +15,8 @@ const Products = ({product, length, index}: Props) => {
   const isLast = index === length - 1
   const isOdd = length % 2 === 1
 
+  const billing = product.billingPeriod ? `/${product.billingPeriod}` : "";
+
   return (
     <div className={`p-[11px] bg-white items-center h-full flex flex-col xl:flex-row gap-[13px] rounded-[10px] ${isLast && isOdd ? "xl:col-span-2 xl:flex xl:justify-center xl:w-[381px]" : "w-full "}`}>
       <div className="relative w-full xl:w-[160px] h-[170px] ">
@@ -43,10 +45,18 @@ const Products = ({product, length, index}: Props) => {
                 <button className={`${product.requiredItem && !product.editable ? "bg-[#F1F1F2] border border-[#CED6DE]" : "bg-very-light-borders "} flex items-center justify-center w-[22px] h-[22px] rounded-[4px] font-semibold`}>+</button>
                 </div>}
             </div>
-            <div className="flex items-center xl:flex-col gap-[3px] xl:gap-[1px]">
-                {product.compareAtPrice && <span className="text-red tracking-[0.6px] line-through text-[16px] lg:text-sm xl:text-[16px] text-right">${product.compareAtPrice}</span>}
-                <span className="text-[16px] lg:text-sm xl:text-[16px] text-price-product tracking-[0.6px]">{product.price === 0  ? "FREE" : `$${product.price}`}</span>
-            </div>
+           <div className="flex items-center xl:flex-col gap-[3px] xl:gap-[1px]">
+            {product.compareAtPrice && (
+              <span className="text-red tracking-[0.6px] line-through text-[16px] lg:text-sm xl:text-[16px] text-right">
+                ${product.compareAtPrice}
+                {billing}
+              </span>
+            )}
+
+            <span className="text-[16px] lg:text-sm xl:text-[16px] text-price-product tracking-[0.6px]">
+              {product.price === 0 ? "FREE" : `$${product.price}${billing}`}
+            </span>
+          </div>
         </div>
       </div>
     </div>
