@@ -37,7 +37,7 @@ const Products = ({product, length, index}: Props) => {
             </div>}
         </div>
         <div className="flex justify-between items-center">
-           <ProductQtyStepper id={product.id} requiredItem={product.requiredItem} editable={product.editable} category={product.category} />
+           {!product.billingPeriod && <ProductQtyStepper id={product.id} requiredItem={product.requiredItem} editable={product.editable} category={product.category} />}
            <div className="flex items-center xl:flex-col gap-[3px] xl:gap-[1px]">
             {product.compareAtPrice && (
               <span className="text-red tracking-[0.6px] line-through text-[16px] lg:text-sm xl:text-[16px] text-right">

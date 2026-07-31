@@ -20,7 +20,7 @@ const ProductQtyStepper = ({id, requiredItem, editable, category} : Props) => {
 
   return (
     <div>
-        <QuantityStepper productId={id} variantId={variantId} requiredItem={requiredItem} editable={editable} quantity={qty} category={category} />
+        <QuantityStepper productId={id} variantId={variantId} requiredItem={requiredItem} editable={editable} quantity={qty}  className="bg-very-light-borders text-black disabled:bg-white  disabled:border-[2px] disabled:border-disabled-button disabled:text-disabled-button" />
     </div>
   )
 }

@@ -55,7 +55,7 @@ export function CartProvider({
       let clamped = Math.max(0, newQty)
 
       if (product.requiredItem && !product.editable) {
-        clamped = Math.max(1, clamped)
+        clamped = 1
       }
 
       if(product.category === "plan"){

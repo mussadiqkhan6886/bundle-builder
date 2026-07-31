@@ -22,7 +22,7 @@ const ReviewItem = ({image, name, productName, billingPeriod, requiredItem, edit
                 </h3>
             </div>
             {/* quantity */}
-            {!billingPeriod && <QuantityStepper category={category} productId={productId} variantId={variantId} requiredItem={requiredItem} editable={editable} quantity={quantity} />}
+            {!billingPeriod && <QuantityStepper productId={productId} variantId={variantId} requiredItem={requiredItem} editable={editable} quantity={quantity} className="bg-white text-black disabled:border-[1px] disabled:bg-disabled-button/20 disabled:border-review-border" />}
         </div>
         <div className='flex flex-col md:flex-row md:gap-[10px] xl:flex-col xl:gap-0'>
             {compareAtPrice && <p className="font-medium text-sm text-review-cut-price line-through text-right">${compareAtPrice}{billingPeriod && <span>/{billingPeriod}</span>}</p>}
