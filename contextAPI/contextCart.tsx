@@ -192,6 +192,8 @@ export function CartProvider({
     )
   }, [selections, activeVariants])
 
+
+
   const value: CartContextValue = {
     steps,
     increment,

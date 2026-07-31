@@ -18,10 +18,10 @@ const ReviewData = () => {
               </h3>
 
               <div className="flex flex-col gap-[12px] ">
-                {(items as ProductCart[]).map((item) =>  {
+                {(items as ProductCart[]).map((item, i) =>  {
                   const productName = item.name === "Cam Unlimited" ? item.name.split(' ') : item.name
 
-                  return  <ReviewItem key={item.productId} productName={productName} {...item} />
+                  return  <ReviewItem key={`${item.productId} ${i}`} productName={productName} {...item} />
                 }
                 )}
               </div>

@@ -1,8 +1,8 @@
 import { Product } from '@/type'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
 import VariantSelector from './VariantSelector'
+import ProductQtyStepper from './ProductQtyStepper'
 
 type Props = {
   product: Product
@@ -36,13 +36,7 @@ const Products = ({product, length, index}: Props) => {
             </div>}
         </div>
         <div className="flex justify-between items-center">
-            <div>
-                {<div className="flex justify-between py-[4px] w-[77px]">
-                <button className={`${product.requiredItem && !product.editable ? "bg-[#F1F1F2] border border-[#CED6DE]" : "bg-very-light-borders "} flex items-center justify-center w-[22px] h-[22px] rounded-[4px] font-semibold`}>-</button>
-                <p className="font-semibold text-sm">0</p>
-                <button className={`${product.requiredItem && !product.editable ? "bg-[#F1F1F2] border border-[#CED6DE]" : "bg-very-light-borders "} flex items-center justify-center w-[22px] h-[22px] rounded-[4px] font-semibold`}>+</button>
-                </div>}
-            </div>
+           <ProductQtyStepper id={product.id} requiredItem={product.requiredItem} editable={product.editable} />
            <div className="flex items-center xl:flex-col gap-[3px] xl:gap-[1px]">
             {product.compareAtPrice && (
               <span className="text-red tracking-[0.6px] line-through text-[16px] lg:text-sm xl:text-[16px] text-right">
