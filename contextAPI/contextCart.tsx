@@ -136,7 +136,7 @@ export function CartProvider({
             variantId,
             name: product.name,
             variantLabel: variant?.label ?? null,
-            image: product.image,
+            image:  variant?.variantImage ?? product.image,
             category: product.category,
             quantity: qty,
             price: product.price,

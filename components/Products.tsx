@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import VariantSelector from './VariantSelector'
 import ProductQtyStepper from './ProductQtyStepper'
+import ImageChanger from './ImageChanger'
 
 type Props = {
   product: Product
@@ -23,7 +24,7 @@ const Products = ({product, length, index}: Props) => {
       <div className="relative w-full xl:w-[160px] h-[170px] ">
         {/* badge */}
         {product.badge && <span className="absolute top-2 left-2 bg-purple text-white py-[2px] px-[6px] rounded-[10px] font-semibold text-xs z-20 ">{product.badge}</span>}
-        <Image src={product.image} alt={product.name} fill className="w-full h-full object-contain" />
+        <ImageChanger image={product.image} name={product.name} variants={product.variants} id={product.id} />
       </div>
       <div className="flex flex-col gap-[12px] w-full">
         <div className="flex flex-col gap-[10px]">
