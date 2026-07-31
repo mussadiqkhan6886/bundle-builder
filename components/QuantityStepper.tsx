@@ -12,11 +12,11 @@ interface Props {
   variantId: string
 }
 
-const QuantityStepper = ({billingPeriod, requiredItem, editable, quantity, productId, variantId}: Props) => {
+const QuantityStepper = ({requiredItem, editable, quantity, productId, variantId}: Props) => {
 
   const {increment, decrement} = useCart()
 
-    return (!billingPeriod &&
+    return (
      <div className="flex justify-between py-[4px] w-[77px]">
         <button onClick={() => decrement(productId, variantId)} className={`${requiredItem && !editable ? "bg-[#F1F1F2] border border-[#CED6DE]" : "bg-white "} flex not-[disabled]:cursor-pointer  items-center justify-center w-[22px] h-[22px] rounded-[4px] font-medium`}>-</button>
         <p className="font-semibold text-sm">{quantity}</p>
