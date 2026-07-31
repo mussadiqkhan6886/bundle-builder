@@ -20,7 +20,8 @@ export interface Product {
   compareAtPrice?: number | null; 
   price: number;
   editable: boolean;             
-  requiredItem: boolean;         
+  requiredItem: boolean;   
+  highlightLastWord?: boolean;      
   variants: Variant[];           
   isRecurring?: boolean;        
   billingPeriod?: "mo" | "yr";
@@ -90,7 +91,7 @@ interface ProductCart {
   variantId: string;
   name: string;
   variantLabel: string | null;
-  image: string | null;
+  image: string;
   category: string;
   quantity: number;
   price: number;
@@ -99,6 +100,7 @@ interface ProductCart {
   requiredItem: boolean;
   isRecurring?: boolean;
   billingPeriod?: string;
+  highlightLastWord?: string
 }
 
 interface Totals {
@@ -123,6 +125,7 @@ interface LineItem {
   variantId: string
   name: string
   variantLabel: string | null
+  highlightLastWord?: boolean
   image: string
   category: string
   quantity: number

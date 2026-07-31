@@ -107,6 +107,7 @@
           "learnMoreUrl": "https://wyze.com/plans/cam-unlimited",
           "image": "/images/plan.png",
           "badge": null,
+          "highlightLastWord": true,
           "compareAtPrice": 12.99,
           "price": 9.99,
           "editable": true,

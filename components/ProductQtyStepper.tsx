@@ -8,9 +8,10 @@ interface Props {
     id: string
     requiredItem: boolean
     editable: boolean
+    category: string
 }
 
-const ProductQtyStepper = ({id, requiredItem, editable} : Props) => {
+const ProductQtyStepper = ({id, requiredItem, editable, category} : Props) => {
 
     const {getQuantity, getActiveVariantId} = useCart()
 
@@ -19,7 +20,7 @@ const ProductQtyStepper = ({id, requiredItem, editable} : Props) => {
 
   return (
     <div>
-        <QuantityStepper productId={id} variantId={variantId} requiredItem={requiredItem} editable={editable} quantity={qty} />
+        <QuantityStepper productId={id} variantId={variantId} requiredItem={requiredItem} editable={editable} quantity={qty} category={category} />
     </div>
   )
 }

@@ -144,6 +144,7 @@ export function CartProvider({
             category: product.category,
             quantity: qty,
             price: product.price,
+            highlightLastWord: product.highlightLastWord,
             compareAtPrice: product.compareAtPrice ?? null,
             editable: product.editable,
             requiredItem: product.requiredItem,

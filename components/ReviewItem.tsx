@@ -1,18 +1,17 @@
 import { ProductCart } from '@/type'
 import Image from 'next/image'
-import { FiShield } from 'react-icons/fi'
 import QuantityStepper from './QuantityStepper'
 
-type Props = Omit<ProductCart, | "category" | "isRecurring" | "variantLabel"> & { productName: string[] | string}
+type Props = Omit<ProductCart, | "isRecurring" | "variantLabel"> & { productName: string[] | string}
 
-const ReviewItem = ({image, name, productName, billingPeriod, requiredItem, editable, compareAtPrice, price, quantity, productId, variantId}: Props) => {
+const ReviewItem = ({image, name, productName, billingPeriod, requiredItem, editable, compareAtPrice, price, quantity, productId, variantId, highlightLastWord, category}: Props) => {
   return (
     <div className="flex gap-[16px] items-center">
         <div className="flex flex-2 gap-[3px] justify-between items-center">
             <div className="flex flex-row items-center gap-[12px]">
-                {image === null ? <FiShield className="text-purple" size={22} /> : <Image className="w-[41px] h-[41px] bg-white rounded-[5px]" src={image} alt={name} width={50} height={50} />}
-                <h3 className={`${name === "Cam Unlimited" ? "font-semibold text-[16px]" : "font-medium text-sm"}`}>
-                    {name === "Cam Unlimited" ? (
+                <Image className="w-[41px] h-[41px] bg-white rounded-[5px]" src={image} alt={name} width={50} height={50} />
+                <h3 className={`${highlightLastWord ? "font-bold text-[16px]" : "font-medium text-sm"}`}>
+                    {highlightLastWord ? (
                     <>
                         {productName[0]}{" "}
                         <span className="text-purple">{productName[1]}</span>
@@ -23,7 +22,7 @@ const ReviewItem = ({image, name, productName, billingPeriod, requiredItem, edit
                 </h3>
             </div>
             {/* quantity */}
-            {!billingPeriod && <QuantityStepper productId={productId} variantId={variantId} requiredItem={requiredItem} editable={editable} quantity={quantity} />}
+            {!billingPeriod && <QuantityStepper category={category} productId={productId} variantId={variantId} requiredItem={requiredItem} editable={editable} quantity={quantity} />}
         </div>
         <div className='flex flex-col md:flex-row md:gap-[10px] xl:flex-col xl:gap-0'>
             {compareAtPrice && <p className="font-medium text-sm text-review-cut-price line-through text-right">${compareAtPrice}{billingPeriod && <span>/{billingPeriod}</span>}</p>}
