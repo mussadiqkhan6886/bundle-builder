@@ -19,9 +19,10 @@ type Props = Step & {
   onToggle: () => void;
   onNext: () => void;
   openStepId: string
+  isProductSelected: (productId: string) => boolean
 }
 
-const Accordion = ({ stepNumber, title, icon, next, products, isOpen, onToggle, onNext, openStepId, id }: Props) => {
+const Accordion = ({ stepNumber, title, icon, next, products, isOpen, onToggle, onNext, openStepId, id, isProductSelected }: Props) => {
 
   const Icon = icons[icon as keyof typeof icons]
   const {getSelectedCount} = useCart()
@@ -52,7 +53,7 @@ const Accordion = ({ stepNumber, title, icon, next, products, isOpen, onToggle, 
         <>
           <div className={`grid grid-cols-1 px-[15px] sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 xl:grid-cols-2  place-items-center gap-[15px] md:gap-[15px] lg:gap-[12px] xl:gap-[15px]`}>
             {products.map((p, i) => (
-              <Products key={p.id} index={i} length={products.length} product={p} />
+              <Products key={p.id} index={i} length={products.length} isProductSelected={isProductSelected} product={p} />
             ))}
           </div>
 

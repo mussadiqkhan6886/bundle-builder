@@ -5,7 +5,7 @@ import Accordion from './Accordion'
 import { useCart } from '@/contextAPI/contextCart'
 
 const AccordionList = () => {
-  const {steps} = useCart()
+  const {steps, isProductSelected} = useCart()
   const [openStepId, setOpenStepId] = useState<string>(steps[0]?.id)
   function toggleStep(stepId: string) {
     setOpenStepId(prev => (prev === stepId ? '' : stepId));
@@ -27,6 +27,7 @@ const AccordionList = () => {
           openStepId={openStepId}
           onToggle={() => toggleStep(s.id)}
           onNext={() => goToNextStep(s.id)}
+          isProductSelected={isProductSelected}
         />
       ))}
     </div>

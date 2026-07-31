@@ -144,7 +144,7 @@ interface Totals {
 
 interface CartContextValue {
   steps: Step[]
-
+  
   // core quantity actions
   increment: (productId: string, variantId: string) => void
   decrement: (productId: string, variantId: string) => void
@@ -167,4 +167,5 @@ interface CartContextValue {
   // persistence
   saveSystem: () => void
 
+  isProductSelected: (productId: string) => boolean
 }

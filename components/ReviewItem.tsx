@@ -4,7 +4,7 @@ import QuantityStepper from './QuantityStepper'
 
 type Props = Omit<ProductCart, | "isRecurring" | "variantLabel"> & { productName: string[] | string}
 
-const ReviewItem = ({image, name, productName, billingPeriod, requiredItem, editable, compareAtPrice, price, quantity, productId, variantId, highlightLastWord, category}: Props) => {
+const ReviewItem = ({image, name, productName, billingPeriod, requiredItem, editable, compareAtPrice, price, quantity, productId, variantId, highlightLastWord}: Props) => {
   return (
     <div className="flex gap-[16px] items-center">
         <div className="flex flex-2 gap-[3px] justify-between items-center">

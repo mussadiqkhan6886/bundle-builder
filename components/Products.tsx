@@ -1,5 +1,4 @@
 import { Product } from '@/type'
-import Image from 'next/image'
 import Link from 'next/link'
 import VariantSelector from './VariantSelector'
 import ProductQtyStepper from './ProductQtyStepper'
@@ -9,9 +8,10 @@ type Props = {
   product: Product
   length: number
   index: number
+  isProductSelected: (productId: string) => boolean
 }
 
-const Products = ({product, length, index}: Props) => {
+const Products = ({product, length, index, isProductSelected}: Props) => {
 
   {/* center last div only if its single or alone only on desktop size (greater then 1536px) */}
   const isLast = index === length - 1
@@ -19,8 +19,10 @@ const Products = ({product, length, index}: Props) => {
 
   const billing = product.billingPeriod ? `/${product.billingPeriod}` : "";
 
+  const isSelected = isProductSelected(product.id)
+
   return (
-    <div className={`p-[11px] bg-white items-center h-full flex flex-col xl:flex-row gap-[13px] rounded-[10px] ${isLast && isOdd ? "xl:col-span-2 xl:flex xl:justify-center xl:w-[381px]" : "w-full "}`}>
+    <div className={`p-[10px] bg-white items-center h-full flex flex-col xl:flex-row gap-[13px] rounded-[10px] ${isLast && isOdd ? "xl:col-span-2 xl:flex xl:justify-center xl:w-[381px]" : "w-full "} border-2  ${isSelected ? "border-selected-product" : "border-transparent"}`}>
       <div className="relative w-full xl:w-[160px] h-[170px] ">
         {/* badge */}
         {product.badge && <span className="absolute top-2 left-2 bg-purple text-white py-[2px] px-[6px] rounded-[10px] font-semibold text-xs z-20 ">{product.badge}</span>}

@@ -197,7 +197,15 @@ export function CartProvider({
     )
   }, [selections, activeVariants])
 
+  const isProductSelected = useCallback(
+    (productId: string) => {
+      const variantQtys = selections[productId];
+      if (!variantQtys) return false;
 
+      return Object.values(variantQtys).some(qty => qty > 0);
+    },
+    [selections]
+  );
 
   const value: CartContextValue = {
     steps,
@@ -213,6 +221,7 @@ export function CartProvider({
     getGroupedLineItems,
     getTotals,
     saveSystem,
+    isProductSelected
   }
 
   return (
