@@ -58,6 +58,10 @@ export function CartProvider({
         clamped = Math.max(1, clamped)
       }
 
+      if(product.category === "plan"){
+        clamped = Math.min(1, clamped)
+      }
+
       setSelections(prev => ({
         ...prev,
         [productId]: {
