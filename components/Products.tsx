@@ -2,6 +2,7 @@ import { Product } from '@/type'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import VariantSelector from './VariantSelector'
 
 type Props = {
   product: Product
@@ -30,10 +31,7 @@ const Products = ({product, length, index}: Props) => {
             <p className="font-medium text-[13px] lg:text-xs xl:text-[13px] text-black/80">{product.description} {product.learnMoreUrl !== undefined && <Link target="_blank" className="text-purple underline" href={product.learnMoreUrl}>Learn More</Link>}</p>
            {product.variants && <div className="flex flex-wrap gap-[6px]">
                 {product.variants.map(v => (
-                    <div className="rounded-[2px] border-[0.5] py-[1px] px-[5px] bg-white/4 border-variant-selector-border cursor-pointer flex items-center" key={v.variantId}>
-                        <Image src={v.variantImage} alt={v.label} width={100} height={100} className="w-6 h-6 object-contain" />
-                        <p className="font-medium text-[10px]">{v.label}</p>
-                    </div>
+                    <VariantSelector key={v.variantId} productId={product.id} {...v}  />
                 ))}
             </div>}
         </div>

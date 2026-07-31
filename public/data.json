@@ -180,28 +180,22 @@
   ],
 
   "seedSelections": {
-    "cam-v4": { "grey": 1, "white": 0, "black": 0 },
-    "cam-pan-v3": { "white": 0, "black": 2 },
+    "cam-v4": { "grey": 0, "white": 1, "black": 0 },
+    "cam-pan-v3": { "white": 2, "black": 0 },
     "cam-floodlight": { "white": 0, "black": 0 },
     "cam-doorbell": { "default": 0 },
     "cam-battery-pro": { "white": 0, "black": 0 },
 
     "plan-cam-unlimited": { "default": 1 },
-    "plan-basic": { "default": 0 },
 
     "sensor-motion": { "default": 2 },
-    "sensor-door": { "default": 0 },
     "sensor-hub": { "default": 1 },
 
-    "accessory-microsd": { "default": 2 },
-    "protect-glassbreak": { "default": 0 },
-    "protect-siren": { "default": 0 }
+    "accessory-microsd": { "default": 2 }
   },
 
   "seedActiveVariants": {
-    "cam-v4": "grey",
-    "cam-pan-v3": "black",
-    "cam-floodlight": "white",
-    "cam-battery-pro": "white"
+    "cam-v4": "white",
+    "cam-pan-v3": "white"
   }
 }
