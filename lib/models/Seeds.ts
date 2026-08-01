@@ -1,10 +1,6 @@
 import mongoose, { Schema } from "mongoose";
 import { Model } from "mongoose";
-
-export type VariantQuantities = Record<string, number>;
-export type Selections = Record<string, VariantQuantities>;
-
-export type ActiveVariants = Record<string, string>;
+import {Selections, ActiveVariants} from "@/type"
 
 export interface ISeedConfig extends Document {
   seedSelections: Selections;

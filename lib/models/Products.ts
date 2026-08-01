@@ -1,4 +1,4 @@
-import { Product, Variant } from '@/type';
+import { Product, Step, Variant } from '@/type';
 import mongoose, { Schema, Document, Model } from 'mongoose';
 
 const VariantSchema = new Schema<Variant>(
@@ -34,16 +34,7 @@ const ProductSchema = new Schema<Product>(
   { _id: false }
 );
 
-export interface IStep extends Document {
-  id: string; 
-  stepNumber: number;
-  title: string;
-  next: string | null;
-  icon: "BiCameraHome" | "FiShield" | "FaWifi" | "FaTableCells";
-  products: Product[];
-}
-
-const StepSchema = new Schema<IStep>(
+const StepSchema = new Schema<Step>(
   {
     id: { type: String, required: true, unique: true },
     stepNumber: { type: Number, required: true },
@@ -55,5 +46,5 @@ const StepSchema = new Schema<IStep>(
   { timestamps: true }
 );
 
-export const StepModel: Model<IStep> =
-  mongoose.models.Step || mongoose.model<IStep>('Step', StepSchema);
+export const StepModel: Model<Step> =
+  mongoose.models.Step || mongoose.model<Step>('Step', StepSchema);
