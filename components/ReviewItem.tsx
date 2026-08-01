@@ -2,7 +2,7 @@ import { ProductCart } from '@/type'
 import Image from 'next/image'
 import QuantityStepper from './QuantityStepper'
 
-type Props = Omit<ProductCart, | "isRecurring" | "variantLabel"> & { productName: string[] | string}
+type Props = Omit<ProductCart, | "variantLabel"> & { productName: string[] | string}
 
 const ReviewItem = ({image, name, productName, billingPeriod, requiredItem, editable, compareAtPrice, price, quantity, productId, variantId, highlightLastWord}: Props) => {
   return (

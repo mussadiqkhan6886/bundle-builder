@@ -112,7 +112,6 @@
           "price": 9.99,
           "editable": true,
           "requiredItem": false,
-          "isRecurring": true,
           "billingPeriod": "mo",
           "variants": []
         }

@@ -23,7 +23,6 @@ export interface Product {
   requiredItem: boolean;   
   highlightLastWord?: boolean;      
   variants: Variant[];           
-  isRecurring?: boolean;        
   billingPeriod?: "mo" | "yr";
 }
 
@@ -98,7 +97,6 @@ interface ProductCart {
   compareAtPrice: number | null;
   editable: boolean;
   requiredItem: boolean;
-  isRecurring?: boolean;
   billingPeriod?: string;
   highlightLastWord?: string
 }

@@ -1,10 +1,19 @@
 import { CartProvider } from "@/contextAPI/contextCart";
+import connectDB from "@/lib/config/db";
+import { StepModel } from "@/lib/models/Products";
+import { SeedConfigModel } from "@/lib/models/Seeds";
 import BundlePanel from "@/sections/BundlePanel";
 import ReviewPanel from "@/sections/ReviewPanel";
 
 const getBundleData = async () => {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/data.json`)
-    const data = await res.json()
+    await connectDB()
+    const steps = await StepModel.find().lean()
+    const seeds = await SeedConfigModel.findOne().lean()
+    const data = {
+      steps: JSON.parse(JSON.stringify(steps)),
+      seedSelections: JSON.parse(JSON.stringify(seeds?.seedSelections ?? {})),
+      seedActiveVariants: JSON.parse(JSON.stringify(seeds?.seedActiveVariants ?? {}))
+    }
     return data
 }
 
