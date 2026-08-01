@@ -76,26 +76,21 @@ interface LineItem {
 interface CartContextValue {
   steps: Step[]
   
-  // core quantity actions
   increment: (productId: string, variantId: string) => void
   decrement: (productId: string, variantId: string) => void
   setQuantity: (productId: string, variantId: string, newQty: number) => void
 
-  // active variant (which chip is highlighted per product)
   activeVariants: ActiveVariants
   setActiveVariant: (productId: string, variantId: string) => void
 
-  // reads
   getQuantity: (productId: string, variantId: string) => number
   getActiveVariantId: (productId: string) => string
   getSelectedCount: (stepId: string) => number
 
-  // review panel
   getLineItems: () => LineItem[]
   getGroupedLineItems: () => Record<string, LineItem[]>
   getTotals: () => Totals
 
-  // persistence
   saveSystem: () => void
 
   isProductSelected: (productId: string) => boolean
